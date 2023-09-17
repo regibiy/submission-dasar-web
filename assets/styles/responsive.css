@@ -1,0 +1,279 @@
+/* mobile */
+@media only screen and (max-width: 767px) {
+  header .jumbotron .logo {
+    margin-bottom: 1rem;
+  }
+  header .jumbotron h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  header .jumbotron p {
+    font-size: 0.75rem;
+  }
+
+  header .jumbotron .basic-inf .basic-inf__card {
+    width: 14rem;
+  }
+
+  header .jumbotron .basic-inf .basic-inf__card:nth-child(1),
+  header .jumbotron .basic-inf .basic-inf__card:nth-child(2),
+  header .jumbotron .basic-inf .basic-inf__card:nth-child(3) {
+    padding: 0.75rem;
+  }
+
+  header .jumbotron .basic-inf .basic-inf__card .basic-inf__card--title {
+    margin-bottom: 0.75rem;
+  }
+
+  header .jumbotron .basic-inf .basic-inf__card .basic-inf__card--title h2 {
+    font-size: 0.75rem;
+  }
+
+  header nav {
+    padding: 1.5rem;
+  }
+
+  header nav .navbar-brand a {
+    font-size: 1rem;
+  }
+
+  header nav .navbar-res {
+    display: block;
+  }
+
+  header nav .navbar-nav {
+    display: none;
+  }
+
+  .unggul {
+    padding: 1rem;
+  }
+
+  .unggul section h3,
+  .dokter section h3,
+  .tentang h3,
+  .kontak h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .fasilitas {
+    padding: 3rem 1rem;
+  }
+
+  .fasilitas section .cards {
+    gap: 2rem;
+  }
+
+  .dokter section {
+    padding: 3rem 0 2rem;
+  }
+
+  .dokter section a {
+    font-size: 0.75rem;
+  }
+
+  .tentang {
+    padding: 0;
+  }
+
+  .tentang .profil .deskripsi {
+    padding: 1rem;
+  }
+
+  .tentang .profil .direktur,
+  .tentang .profil .deskripsi {
+    width: 100%;
+  }
+
+  .tentang .profil .deskripsi h4 {
+    text-align: center;
+  }
+
+  .tentang .profil .deskripsi p {
+    text-align: justify;
+    font-size: 0.75rem;
+  }
+
+  aside {
+    display: block;
+    padding: 2rem 3rem;
+    text-align: center;
+  }
+
+  aside .biodata {
+    padding: 2rem;
+    border-radius: 5px;
+    border: 1px solid var(--secondary);
+    color: var(--dark);
+    transition: 0.5s ease;
+  }
+
+  aside .biodata:hover {
+    background-color: var(--blue);
+    color: var(--white);
+    animation: bouncing-up 1.5s 1s infinite;
+    position: relative;
+  }
+
+  @keyframes bouncing-up {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(1deg);
+    }
+    50% {
+      transform: rotate(-1deg);
+    }
+  }
+
+  aside .biodata img {
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+  }
+
+  aside .biodata p:first-of-type {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  aside .biodata p:nth-child(3) span {
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+
+  aside .biodata p {
+    font-size: 0.75rem;
+  }
+
+  footer article:first-of-type {
+    padding: 3rem 1.5rem;
+  }
+
+  footer article section {
+    width: 100%;
+  }
+
+  footer article .all-info .info-dasar {
+    margin-bottom: 1rem;
+  }
+
+  footer article .all-info .info-dasar div {
+    width: 100%;
+    font-size: 0.75rem;
+    justify-content: flex-start;
+  }
+
+  footer article:first-of-type .all-info .informasi p:first-of-type,
+  .medsos p:first-of-type {
+    margin-bottom: 0.75rem;
+  }
+
+  footer article .all-info .medsos p:nth-last-child(-n + 3) {
+    font-size: 0.75rem;
+  }
+
+  footer article:first-of-type .all-info .informasi {
+    margin-bottom: 1rem;
+  }
+
+  footer article:last-of-type {
+    padding: 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  header nav .navbar-res {
+    display: none;
+  }
+
+  header nav .navbar-nav {
+    display: block;
+  }
+
+  header .jumbotron h1 {
+    font-size: 2rem;
+  }
+
+  header .jumbotron p {
+    font-size: 1rem;
+  }
+
+  header .jumbotron .basic-inf .basic-inf__card .basic-inf__card--title h2 {
+    font-size: 1rem;
+  }
+
+  header nav {
+    padding: 1.5rem;
+  }
+
+  header nav .navbar-brand a {
+    font-size: 1.2rem;
+  }
+
+  .unggul {
+    padding: 1rem;
+  }
+
+  .fasilitas section .cards {
+    gap: 3rem;
+  }
+
+  .dokter section {
+    padding: 3rem 0 2rem;
+  }
+
+  .tentang {
+    padding: 0;
+  }
+
+  .tentang .profil .deskripsi {
+    padding: 2rem;
+  }
+
+  .tentang .profil .direktur,
+  .tentang .profil .deskripsi {
+    width: 100%;
+  }
+
+  .tentang .profil .deskripsi h4 {
+    text-align: center;
+  }
+
+  .tentang .profil .deskripsi p {
+    text-align: justify;
+    font-size: 1rem;
+  }
+
+  footer article:first-of-type {
+    padding: 3rem 1.5rem;
+  }
+
+  footer article section {
+    width: 50%;
+  }
+
+  footer article .all-info .info-dasar {
+    margin-bottom: 1.5rem;
+  }
+
+  footer article .all-info .info-dasar div {
+    width: 100%;
+    font-size: 1rem;
+    justify-content: flex-start;
+  }
+
+  footer article .all-info .medsos p:nth-last-child(-n + 3) {
+    font-size: 1rem;
+  }
+
+  footer article:last-of-type {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}

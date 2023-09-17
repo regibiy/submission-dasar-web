@@ -1,0 +1,520 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --white: rgb(255, 255, 255);
+  --white-opac: rgba(255, 255, 255, 0.2);
+  --black: rgb(0, 0, 0);
+  --black-opac: rgba(0, 0, 0, 0.5);
+  --blue: rgb(39, 93, 173);
+  --blue-opac: rgba(39, 93, 173, 0.7);
+  --shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  --secondary: rgb(108, 117, 125);
+  --dark: rgb(73, 80, 87);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 50%;
+  background-color: var(--blue);
+  padding: 1rem;
+  position: fixed;
+  right: -50%;
+  z-index: 2;
+  transition: 0.5s ease;
+}
+
+.active {
+  right: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul li a {
+  color: var(--white);
+  text-decoration: none;
+  text-transform: capitalize;
+  display: inline-block;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.sidebar ul li a:hover {
+  font-weight: 500;
+  color: var(--dark);
+  background-color: var(--white);
+  border-radius: 5px;
+}
+
+header {
+  display: inline;
+}
+
+header .jumbotron {
+  min-height: 100vh;
+  background-image: linear-gradient(var(--blue-opac), var(--blue-opac)), url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header .jumbotron .logo {
+  width: 3rem;
+}
+
+header .jumbotron h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 3rem;
+  text-shadow: var(--shadow);
+}
+
+header .jumbotron > p {
+  text-transform: capitalize;
+  font-size: 1rem;
+  text-align: center;
+  text-shadow: var(--shadow);
+}
+
+header .jumbotron .go {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 300;
+  text-decoration: none;
+  transform: rotate(90deg);
+  color: var(--white);
+  position: absolute;
+  bottom: 0px;
+  border-radius: 50px;
+  transition: 0.5s ease;
+  animation: bouncing 2s infinite;
+}
+
+@keyframes bouncing {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: -10px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+header .jumbotron .go:hover {
+  background-color: var(--white-opac);
+  text-shadow: var(--shadow);
+}
+
+header .jumbotron .basic-inf {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1px;
+  margin-top: 2rem;
+}
+
+header .jumbotron .basic-inf .basic-inf__card {
+  width: 15rem;
+  height: auto;
+}
+
+header .jumbotron .basic-inf .basic-inf__card:nth-child(1) {
+  padding: 1.5rem;
+  background-color: var(--black-opac);
+  border-radius: 5px 0 0 5px;
+}
+
+header .jumbotron .basic-inf .basic-inf__card:nth-child(2) {
+  padding: 1.5rem;
+  background-color: var(--black-opac);
+}
+
+header .jumbotron .basic-inf .basic-inf__card:nth-child(3) {
+  padding: 1.5rem;
+  background-color: var(--black-opac);
+  border-radius: 0 5px 5px 0;
+}
+
+header .jumbotron .basic-inf .basic-inf__card .basic-inf__card--title {
+  margin-bottom: 1rem;
+}
+
+header .jumbotron .basic-inf .basic-inf__card .basic-inf__card--title h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+header .jumbotron .basic-inf .basic-inf__card .basic-inf__card--body {
+  display: flex;
+  gap: 0.75rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1.5rem 10rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--white);
+}
+
+header nav .navbar-brand a {
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+header nav .navbar-res {
+  display: none;
+}
+
+header nav .navbar-nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+header nav .navbar-nav ul li a {
+  margin-left: 1rem;
+  padding: 0.5rem;
+  color: var(--dark);
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+header nav .navbar-nav ul li a:hover {
+  color: var(--white);
+  background-color: var(--blue-opac);
+}
+
+.unggul,
+.dokter section,
+.tentang {
+  padding: 3rem 10rem;
+}
+
+.unggul section h3,
+.dokter section h3,
+.tentang h3,
+.kontak h3 {
+  color: var(--dark);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.unggul section .cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.unggul section .cards .cards__card {
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+  width: 18rem;
+  max-height: 25rem;
+  transition: 0.5s ease;
+}
+
+.unggul section .cards .cards__card:hover {
+  scale: 1.1;
+  cursor: pointer;
+  background-color: var(--blue-opac);
+  color: var(--white);
+}
+
+.unggul section .cards .cards__card:hover h4,
+.unggul section .cards .cards__card:hover p {
+  color: var(--white);
+}
+
+.unggul section .cards .cards__card img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.unggul section .cards .cards__card h4 {
+  padding: 1rem;
+  font-weight: 600;
+  color: var(--dark);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.unggul section .cards .cards__card p {
+  font-weight: 300;
+  font-size: 0.75rem;
+  text-align: justify;
+  padding: 0 1rem 1rem;
+  color: var(--secondary);
+}
+
+.fasilitas {
+  color: var(--white);
+  padding: 5rem;
+  background-image: linear-gradient(var(--blue-opac), var(--blue-opac)), url(../img/bg-room.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.fasilitas section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.fasilitas section .cards {
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+  flex-wrap: wrap;
+}
+
+.fasilitas section .cards .cards__card {
+  color: var(--dark);
+  background-color: var(--white);
+  padding: 1rem;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: 0.5s ease;
+}
+
+.fasilitas section .cards .cards__card:hover {
+  scale: 1.1;
+  cursor: pointer;
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.fasilitas section .cards .cards__card h4 {
+  font-size: 1.5rem;
+}
+
+.dokter section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dokter section .cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.dokter section .cards .cards__card {
+  width: 18rem;
+  min-height: 25rem;
+  padding: 1.5rem;
+  border-radius: 5px;
+  background-color: var(--blue);
+  text-align: center;
+  color: var(--white);
+  transition: 0.5s ease;
+}
+
+.dokter section .cards .cards__card:hover {
+  scale: 1.1;
+  background-color: var(--white);
+  border: 1px solid var(--secondary);
+  color: var(--dark);
+  cursor: pointer;
+}
+
+.dokter section .cards .cards__card img {
+  width: 200px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 1rem;
+}
+
+.dokter section .cards .cards__card h4 {
+  margin-bottom: 0.5rem;
+}
+
+.dokter section .cards .cards__card p:first-of-type {
+  margin-bottom: 1rem;
+}
+
+.dokter section .cards .cards__card p:last-of-type {
+  font-size: 0.75rem;
+  text-align: justify;
+}
+
+.dokter section a {
+  color: var(--white);
+  text-decoration: none;
+  text-transform: capitalize;
+  display: inline-block;
+  padding: 0.5rem;
+  margin: 3rem auto 0;
+  background-color: var(--blue);
+  border-radius: 5px;
+  opacity: 0.7;
+  transition: 0.5s ease;
+}
+
+.dokter section a:hover {
+  opacity: 1;
+}
+
+.tentang .profil {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.tentang .profil .direktur {
+  width: 60%;
+  height: 30rem;
+  background-image: url(../img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tentang .profil .direktur img {
+  width: 150px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 1rem;
+}
+
+.tentang .profil .direktur h4 span {
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+.tentang .profil .direktur h4 {
+  padding: 0.5rem;
+  color: var(--dark);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.tentang .profil .deskripsi {
+  width: 35%;
+}
+
+.tentang .profil .deskripsi h4 {
+  color: var(--dark);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.tentang .profil .deskripsi p {
+  color: var(--secondary);
+  margin-bottom: 2rem;
+}
+
+.kontak iframe {
+  width: 100%;
+  height: 30rem;
+  border: none;
+}
+
+aside {
+  display: none;
+}
+
+footer {
+  background-color: var(--blue);
+}
+
+footer h3 {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+footer article:first-of-type {
+  padding: 3rem 10rem;
+  color: var(--white);
+}
+
+footer article:first-of-type .all-info .informasi p:first-of-type,
+.medsos p:first-of-type {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+footer article:first-of-type .all-info .informasi p:last-of-type {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+footer article .all-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer article .all-info .info-dasar div {
+  display: inline-flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+footer article .all-info .medsos p i {
+  display: inline-block;
+  padding-right: 0.5rem;
+}
+
+footer article section {
+  width: 25%;
+}
+
+footer article:last-of-type {
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--dark);
+  background-color: var(--white);
+}
+
+footer article:last-of-type span {
+  font-weight: 600;
+}
